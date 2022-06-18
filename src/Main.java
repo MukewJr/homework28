@@ -14,6 +14,6 @@ public class Main {
         ArrayList<Integer> evenNumberSqrt = (ArrayList<Integer>) Stream.of(array).filter(x -> x % 2 == 0).map(x -> x * x).collect(Collectors.toList());
         System.out.print("Squares of array even numbers are: "+evenNumberSqrt);
         Optional<Integer> maxNumber=evenNumberSqrt.stream().max(Comparator.comparing(Integer::valueOf));
-        System.out.println("\n max value of square: " + maxNumber);
+        System.out.println("\n max value of square: " + maxNumber.get());
     }
 }
